@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "../constants";
+import  ADD_TO_CART  from "../constants";
 
 const initialState = {
     cardData:[]
@@ -16,5 +16,8 @@ export default function cardItems(state = initialState, action){
                     cardData:action.data
                 }
             ]
+
+            default:
+                 return state;
     }
 }

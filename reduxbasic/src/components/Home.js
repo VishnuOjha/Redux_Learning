@@ -1,7 +1,8 @@
 import React from "react";
 import "../components/home.css"
 
-const Home = () => {
+const Home = (props) => {
+    console.log(props);
   return (
     <>
       <nav>
