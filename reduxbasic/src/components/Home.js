@@ -1,13 +1,13 @@
 import React from "react";
 import "../components/home.css"
 
-const Home = (props) => {
-    console.log(props);
+function Home(props) {
+    console.warn("Home",props.cardData);
   return (
     <>
       <nav>
         <h1>Home Conatiner</h1>
-        <div className="add-to-cart">cart 0</div>
+        <div className="add-to-cart">cart {props.cardData.length}</div>
       </nav>
       <div className="cart-wrapper">
         <div className="image-wrapper">
@@ -20,7 +20,7 @@ const Home = (props) => {
           <span className="product-name">I Phone 11 :</span>
           <span className="product-price">1,10,000</span>
           <div className="btn-wrapper">
-            <button>Add to cart</button>
+            <button onClick={()=>props.addCartHandler({name:"i phone 11", price:1000 })}>Add to cart</button>
           </div>
         </div>
       </div>
